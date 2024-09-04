@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-    font-family: Roboto, sans-serif;
+   font-family: Roboto, sans-serif;
+   background-color: #ffffff;
+   width: 100vw;
+   width: 100dvw;
+   min-height: 100vh;
+   min-height: 100 dvh;
 }
 
 h1,
@@ -11,5 +16,5 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: Raleway, sans-serif;
+   font-family: Raleway, sans-serif;
 }
