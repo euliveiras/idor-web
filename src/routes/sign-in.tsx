@@ -17,7 +17,7 @@ export default function SignIn() {
 
                <div className="mt-auto flex flex-col items-center">
                   <p>não tem conta?</p>
-                  <Link to="/sign-in">se cadastrar</Link>
+                  <Link to="/sign-up">se cadastrar</Link>
                </div>
             </div>
          </main>
