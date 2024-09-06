@@ -1,9 +1,21 @@
+import { useLoaderData } from 'react-router-dom'
 import { Link } from '../components/custom-link'
 import { Header } from '../components/header'
 import { MicrosoftButton } from '../components/microsoft-button'
 import { Title } from '../components/title'
+import { getSignInPage } from '../services/get-sign-in-page'
+
+export async function signInLoader() {
+   const { data, error } = await getSignInPage()
+
+   return { data, error }
+}
 
 export default function SignIn() {
+   const data = useLoaderData() as Awaited<ReturnType<typeof signInLoader>>
+
+console.log(data)
+
    return (
       <div className="flex h-screen w-screen flex-col gap-12">
          <Header className="flex-initial" />
