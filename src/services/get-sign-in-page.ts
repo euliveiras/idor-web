@@ -1,6 +1,6 @@
 import { getConfig } from '../configs/api'
 
-export async function getSignInPage() {
+export async function getSignInPage(): Promise<{ error?: string; data?: { link: string }}> {
    try {
       const { baseUrl } = getConfig()
       const url = new URL(baseUrl + '/auth/sign-in')
