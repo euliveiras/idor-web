@@ -6,7 +6,7 @@ const styles = {
    link: 'underline text-primary hover:text-linkHover active:text-linkActive visited:text-linkVisited',
 }
 
-type Props = LinkProps & {
+export type Props = LinkProps & {
    variant?: keyof typeof styles
 }
 
