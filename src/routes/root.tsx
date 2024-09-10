@@ -1,10 +1,11 @@
-import { Header } from '../components/header'
+import {LoaderFunctionArgs} from "react-router-dom";
+
+export function rootLoader({request}: LoaderFunctionArgs){
+	console.log(request.headers)
+
+	return null
+}
 
 export default function Root() {
-   return (
-      <div className="h-screen w-screen">
-         <Header />
-         <p>Hi</p>
-      </div>
-   )
+	return <p>root</p>
 }
