@@ -1,11 +1,14 @@
-import {LoaderFunctionArgs} from "react-router-dom";
+import {redirect} from 'react-router-dom'
+import { Msal } from '../configs/ms-identity'
 
-export function rootLoader({request}: LoaderFunctionArgs){
-	console.log(request.headers)
+export async function rootLoader() {
+   const token = await Msal.acquireToken()
 
-	return null
+	if(!token) throw redirect("/sign-in")
+
+	return redirect("/home")
 }
 
 export default function Root() {
-	return <p>root</p>
+   return null
 }

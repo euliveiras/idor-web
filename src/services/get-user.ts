@@ -3,9 +3,10 @@ import { getConfig } from '../configs/api'
 export async function getUser() {
    try {
       const { baseUrl } = getConfig()
-		const url = new URL(baseUrl + "/auth/get-user")
+		const url = new URL(baseUrl + "/auth/user")
 
-      const res = await fetch(url)
+      const res = await fetch(url, { credentials: "same-origin" })
+	console.log(res)
 
       if (res.status >= 200 && res.status < 300) {
          return { data: await res.json() }
