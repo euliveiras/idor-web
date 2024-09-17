@@ -1,10 +1,10 @@
-import { Link, Props } from './custom-link'
+import { Button, Props } from './custom-button'
 
 export function MicrosoftButton(props: Props) {
    return (
-      <Link variant="iconButton" {...props}>
+      <Button variant="iconButton" {...props}>
          <img src="assets/microsoft-logo.svg" />
          <p className="font-medium">microsoft</p>
-      </Link>
+      </Button>
    )
 }

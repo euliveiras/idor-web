@@ -1,14 +1,16 @@
-import {redirect} from 'react-router-dom'
+import { Outlet, redirect } from 'react-router-dom'
 import { Msal } from '../configs/ms-identity'
 
 export async function rootLoader() {
    const token = await Msal.acquireToken()
 
-	if(!token) throw redirect("/sign-in")
+   if (!token) throw redirect('/sign-in')
 
-	return redirect("/home")
+   // const { data } = await getUser()
+
+   return null
 }
 
 export default function Root() {
-   return null
+   return <Outlet />
 }
